@@ -23,7 +23,7 @@ app.use(fileUpload({
   useTempFiles: true   //it must be used
 }))
 
-const port = 4000
+const port = process.env.PORT || 4000 
 
 app.get('/', (req, res) => {
   res.send('Hello Boss!')
